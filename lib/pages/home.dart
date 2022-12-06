@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_chrt/components/Navbar.dart';
 import 'package:flutter_chrt/components/cardleder.dart';
+import 'package:flutter_chrt/pages/favolist.dart';
 import 'package:flutter_chrt/pages/profile.dart';
 
 class Home extends StatefulWidget {
@@ -56,7 +57,7 @@ class Screencher extends StatelessWidget {
 class Screenaddimg extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text('favolist'));
+    return favolistpage();
   }
 }
 

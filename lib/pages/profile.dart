@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_chrt/components/cardactivity.dart';
 import 'package:flutter_chrt/components/text.dart';
 import 'package:flutter_chrt/global.dart';
 
@@ -41,7 +44,6 @@ class Profile extends StatelessWidget {
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                          border: Border.all(width: 2, color: Colors.red),
                           borderRadius: BorderRadius.circular(50)),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(50),
@@ -222,10 +224,22 @@ class Profile extends StatelessWidget {
           )),
           SliverGrid(
               delegate: SliverChildBuilderDelegate((context, index) {
-                return Container(
-                    color: Colors.purple[index * 100],
-                    child: Center(child: Text("$index")));
-              }, childCount: 10),
+                return GestureDetector(
+                    onTap: () {
+                      print("Tapped a Container" + "$index");
+                    },
+                    child: Container(
+                      color: Colors.amber,
+                      // child: Center(child: Text("$index"))
+                      child: ClipRRect(
+                        child: Image(
+                          image: new AssetImage("../../images/sixnine.jpg"),
+                          height: 52.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ));
+              }, childCount: podcast2.length),
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3, mainAxisSpacing: 2, crossAxisSpacing: 2))
         ],

@@ -39,6 +39,17 @@ class _PodcastState extends State<Podcast> {
             ),
           ),
           SliverToBoxAdapter(
+            child: Container(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Story',
+                  style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                ),
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
             child: SizedBox(
               height: 100.0,
               child: ListView.builder(
@@ -89,6 +100,17 @@ class _PodcastState extends State<Podcast> {
                     ),
                   );
                 },
+              ),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: Container(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Subject',
+                  style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
           ),
@@ -168,37 +190,40 @@ class _PodcastState extends State<Podcast> {
                           ),
                         ),
                         Container(
-                          child: Row(
-                            children: [
-                              Container(
-                                  child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.favorite_border),
-                                    Text('224')
-                                  ],
-                                ),
-                              )),
-                              Container(
-                                  child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  children: [Icon(Icons.comment), Text('85')],
-                                ),
-                              )),
-                              Spacer(),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Icon(Icons.data_saver_on_sharp),
-                              )
-                            ],
+                          child: Padding(
+                            padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                            child: Row(
+                              children: [
+                                Container(
+                                    child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.favorite_border),
+                                      Text('224')
+                                    ],
+                                  ),
+                                )),
+                                Container(
+                                    child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Row(
+                                    children: [Icon(Icons.comment), Text('85')],
+                                  ),
+                                )),
+                                Spacer(),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Icon(Icons.data_saver_on_sharp),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                         Container(
                           width: 600,
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                            padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
                             child: Row(
                               children: [
                                 Container(
@@ -232,7 +257,7 @@ class _PodcastState extends State<Podcast> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          padding: const EdgeInsets.fromLTRB(30, 0, 0, 0),
                           child: Row(
                             children: [
                               Container(

@@ -13,25 +13,27 @@ class BottomMenu extends StatelessWidget {
     return BottomNavigationBar(
       items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.home_outlined),
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.search),
+          icon: Icon(Icons.search_outlined),
           label: 'Search',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.favorite),
+          icon: Icon(
+            Icons.favorite_border_outlined,
+          ),
           label: 'Favorite',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.person_pin_circle_rounded),
+          icon: Icon(Icons.person_pin_circle_outlined),
           label: 'Profile',
         )
       ],
       currentIndex: selectedIndex,
       onTap: onClicked,
-      selectedItemColor: Colors.red[800],
+      selectedItemColor: Colors.purple[400],
       backgroundColor: Colors.black,
       unselectedItemColor: Colors.black,
     );
